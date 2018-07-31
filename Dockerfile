@@ -6,3 +6,4 @@ RUN python install.py
 
 FROM cirros AS themekit
 COPY --from=builder /usr/local/bin/theme /usr/local/bin/
+ENTRYPOINT [ "/usr/local/bin/theme" ]
