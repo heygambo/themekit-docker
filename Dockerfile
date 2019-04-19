@@ -1,7 +1,7 @@
 FROM python:2.7-alpine AS builder
 
 WORKDIR /build
-ADD https://raw.githubusercontent.com/Shopify/themekit/master/scripts/install install.py
+ADD https://shopify.github.io/themekit/scripts/install.py install.py
 RUN python install.py
 
 FROM cirros AS themekit
